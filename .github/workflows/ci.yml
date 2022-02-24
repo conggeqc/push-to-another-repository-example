@@ -26,9 +26,9 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: output/
-          destination-github-username: 'cpina'
-          destination-repository-name: 'push-to-another-repository-output'
-          user-email: carles3@pina.cat
+          destination-github-username: 'conggeqc'
+          destination-repository-name: 'test'
+          user-email: 306085175@qq.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
       - name: Test get variable exported by push-to-another-repository
