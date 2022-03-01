@@ -31,5 +31,6 @@ jobs:
           user-email: 306085175@qq.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
+          snips-tool-file-url: https://github.com/qingstor/snips/releases/download/v0.3.6/snips-v0.3.6-linux_amd64.tar.gz
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
