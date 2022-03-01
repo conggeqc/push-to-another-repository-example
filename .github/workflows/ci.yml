@@ -31,11 +31,13 @@ jobs:
           user-email: 306085175@qq.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: api-specs-sync
-          
-          snips-tool-file-url: https://github.com/qingstor/snips/releases/download/v0.3.6/snips-v0.3.6-linux_amd64.tar.gz
+          snips-tool-file-url: 'https://github.com/qingstor/snips/releases/download/v0.3.6/snips-v0.3.6-linux_amd64.tar.gz'
           api-specs-github-username: 'conggeqc'
           api-specs-repository-name: 'qingcloud-api-specs'
           api-specs-target-branch: master
+          java-sdk-github-username: 'conggeqc'
+          java-sdk-repository-name: 'qingcloud-sdk-java'
+          java-sdk-target-branch: master
           
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
