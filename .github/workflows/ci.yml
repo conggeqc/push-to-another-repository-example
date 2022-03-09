@@ -4,9 +4,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ feature/push2another ]
   pull_request:
-    branches: [ main ]
+    branches: [ feature/push2another ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
@@ -21,7 +21,7 @@ jobs:
         run:  sh ./build.sh
       - name: Pushes to another repository
         id: push_directory
-        uses: conggeqc/github-action-push-to-another-repository@feature/sync2sdk
+        uses: conggeqc/github-action-push-to-another-repository@feature/push2another
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
