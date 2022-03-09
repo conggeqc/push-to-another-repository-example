@@ -21,7 +21,8 @@ jobs:
         run:  sh ./build.sh
       - name: Pushes to another repository
         id: push_directory
-        uses: conggeqc/github-action-push-to-another-repository@feature/push2another
+        #uses: conggeqc/github-action-push-to-another-repository@feature/push2another
+        uses: conggeqc/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
