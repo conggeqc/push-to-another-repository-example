@@ -28,7 +28,7 @@ jobs:
           source-directory: output/
           destination-github-username: 'conggeqc'
           destination-repository-name: 'test'
-          user-email: 306085175@qq.com
+          user-email: conggeqc@gmail.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
           
