@@ -17,22 +17,21 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install mustache (to update the date)
         run:  apk add ruby && gem install mustache
-      - name: creates output
-        run:  sh ./build.sh
+#      - name: creates output
+#        run:  sh ./build.sh
       - name: Pushes to another repository
         id: push_directory
         uses: conggeqc/github-action-push-to-another-repository@feature/sync2sdk
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: output/
-          destination-github-username: 'conggeqc'
-          destination-repository-name: 'test'
+          #source-directory: output/
+          #destination-github-username: 'conggeqc'
+          #destination-repository-name: 'test'
           user-email: conggeqc@gmail.com
           user-name: conggeqc
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
-          target-branch: api-specs-sync
-          snips-tool-file-url: 'https://github.com/qingstor/snips/releases/download/v0.3.6/snips-v0.3.6-linux_amd64.tar.gz'
+          #target-branch: api-specs-sync
           api-specs-github-username: 'conggeqc'
           api-specs-repository-name: 'qingcloud-api-specs'
           api-specs-target-branch: master
@@ -42,14 +41,15 @@ jobs:
           
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-           token: ${{ secrets.API_TOKEN_GITHUB }}
-           commit-message: create Pull requests by robot
-           title: pr by robot
-           body: create Pull requests from branch api-specs-sync by robot
-           branch: master
-           base: master
+
+#      - name: Create Pull Request
+#        uses: peter-evans/create-pull-request@v3
+#        with:
+#           token: ${{ secrets.API_TOKEN_GITHUB }}
+#           commit-message: create Pull requests by robot
+#           title: pr by robot
+#           body: create Pull requests from branch api-specs-sync by robot
+#           branch: master
+#           base: master
 
 
