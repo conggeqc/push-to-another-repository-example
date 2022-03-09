@@ -37,8 +37,8 @@ jobs:
           api-specs-target-branch: master
           java-sdk-github-username: 'conggeqc'
           java-sdk-repository-name: 'qingcloud-sdk-java'
-          java-sdk-target-branch: master
-          
+          java-sdk-target-branch: api-specs-sync
+
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
 
