@@ -42,3 +42,14 @@ jobs:
           
       - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+           token: ${{ secrets.API_TOKEN_GITHUB }}
+           commit-message: create Pull requests by robot
+           title: pr by robot
+           body: create Pull requests from branch api-specs-sync by robot
+           branch: master
+           base: master
+
+
